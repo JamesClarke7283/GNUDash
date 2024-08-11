@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "GNURunner"
+name = "GNUDash"
 dynamic = ["version"]
 description = "A GNU (Gnu's Not Unix) inspired Platformer game, Collect Source code points, avoid DRM, and have fun."
 authors = [
@@ -35,14 +35,14 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/JamesClarke7283/GNURunner"
-"Bug Tracker" = "https://github.com/JamesClarke7283/GNURunner/issues"
+Homepage = "https://github.com/JamesClarke7283/GNUDash"
+"Bug Tracker" = "https://github.com/JamesClarke7283/GNUDash/issues"
 
 [tool.setuptools]
 packages = ["src"]
 
 [project.scripts]
-gnurunner = "src.game:main"
+gnudash = "src.main:main"
 
 [tool.black]
 line-length = 100

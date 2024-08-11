@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from appdirs import user_log_dir
 import coloredlogs
 
-def setup_logging(app_name: str = "PixelArcade") -> logging.Logger:
+def setup_logging(app_name: str = "GNUDash") -> logging.Logger:
     load_dotenv()
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
     LOG_DIR = user_log_dir(app_name)

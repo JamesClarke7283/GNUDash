@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GNURunner"
+dynamic = ["version"]
+description = "A GNU (Gnu's Not Unix) inspired Platformer game, Collect Source code points, avoid DRM, and have fun."
+authors = [
+    {name = "James David Clarke", email = "james@jamesdavidclarke.com"},
+]
+license = {text = "GPL-3.0-or-later"}
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "pillow",
+    "pygame",
+    "python-dotenv",
+    "coloredlogs",
+    "appdirs"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/JamesClarke7283/GNURunner"
+"Bug Tracker" = "https://github.com/JamesClarke7283/GNURunner/issues"
+
+[tool.setuptools]
+packages = ["src"]
+
+[project.scripts]
+gnurunner = "src.game:main"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true

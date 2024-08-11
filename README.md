@@ -1,4 +1,4 @@
-# GNU Runner
+# GNU Dash
 A GNU (Gnu's Not Unix) inspired Platformer game, Collect Source code points, avoid DRM, and have fun.
 
 ## Licensing
